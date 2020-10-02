@@ -18,8 +18,8 @@ body {
 }
 
 .active {
-  background-color: rgba($color-primary, 0.15) !important;
-  color: $color-primary !important;
+  background-color: rgba($color-indigo, 0.15) !important;
+  color: $color-indigo !important;
 }
 
 .spacer {
@@ -29,7 +29,7 @@ body {
 .separator {
   background-color: rgba(0, 0, 0, 0.12);
   height: 1px;
-  margin: 0 10px;
+  margin: 0 0px;
 }
 
 button:focus {
