@@ -1,0 +1,335 @@
+
+  /* Anker */
+  $color-primary: #002b58;
+  $color-accent: #ab0035;
+  $color-gradient-primary: linear-gradient(60deg, #3a5385, #002b58);
+  $color-gradient-accent: linear-gradient(60deg, #e3495e, #ab0035);
+
+  /* Material */
+  $color-red: #F44336;
+  $color-red-dark: #D32F2F;
+  $color-purple: #9C27B0;
+  $color-purple-dark: #7B1FA2;
+  $color-deeppurple: #673AB7;
+  $color-deeppurple-dark: #512DA8;
+  $color-indigo: #3F51B5;
+  $color-indigo-dark: #303F9F;
+  $color-blue: #2196F3;
+  $color-blue-dark: #1976D2;
+  $color-cyan: #00BCD4;
+  $color-cyan-dark: #0097A7;
+  $color-teal: #009688;
+  $color-teal-dark: #00796B;
+  $color-green: #4CAF50;
+  $color-green-dark: #388E3C;
+  $color-lightgreen: #8BC34A;
+  $color-lightgreen-dark: #689F38;
+  $color-yellow: #FFEB3B;
+  $color-yellow-dark: #FBC02D;
+  $color-amber: #FFC107;
+  $color-amber-dark: #FFA000;
+  $color-orange: #FF9800;
+  $color-orange-dark: #F57C00;
+  $color-deeporange: #FF5722;
+  $color-deeporange-dark: #E64A19;
+  $color-grey: #9E9E9E;
+  $color-grey-dark: #616161;
+  $color-bluegrey: #607D8B;
+  $color-bluegrey-dark: #455A64;
+  $color-gradient-red: linear-gradient(60deg, $color-red, $color-red-dark);
+  $color-gradient-purple: linear-gradient(60deg, $color-purple, $color-purple-dark);
+  $color-gradient-deeppurple: linear-gradient(60deg, $color-deeppurple, $color-deeppurple-dark);
+  $color-gradient-indigo: linear-gradient(60deg, $color-indigo, $color-indigo-dark);
+  $color-gradient-blue: linear-gradient(60deg, $color-blue, $color-blue-dark);
+  $color-gradient-cyan: linear-gradient(60deg, $color-cyan, $color-cyan-dark);
+  $color-gradient-teal: linear-gradient(60deg, $color-teal, $color-teal-dark);
+  $color-gradient-green: linear-gradient(60deg, $color-green, $color-green-dark);
+  $color-gradient-lightgreen: linear-gradient(60deg, $color-lightgreen, $color-lightgreen-dark);
+  $color-gradient-yellow: linear-gradient(60deg, $color-yellow, $color-yellow-dark);
+  $color-gradient-amber: linear-gradient(60deg, $color-amber, $color-amber-dark);
+  $color-gradient-orange: linear-gradient(60deg, $color-orange, $color-orange-dark);
+  $color-gradient-deeporange: linear-gradient(60deg, $color-deeporange, $color-deeporange-dark);
+  $color-gradient-grey: linear-gradient(60deg, $color-grey, $color-grey-dark);
+  $color-gradient-bluegrey: linear-gradient(60deg, $color-bluegrey, $color-bluegrey-dark);
+
+  /* Dark & Light */
+  $color-dark: #272727;
+  $color-dark-secondary: #212121;
+  $color-black: #000;
+  $color-black-muted: rgba(0, 0, 0, 0.65);
+  $color-light: #fafafa;
+  $color-light-secondary: #eeeeee;
+  $color-white: #fff;
+  $color-white-muted: rgba(255, 255, 255, 0.65);
+  $color-gradient-dark: linear-gradient(60deg, $color-dark, $color-dark-secondary);
+  $color-gradient-light: linear-gradient(60deg, $color-light, $color-light-secondary); 
+
+  /* Social */
+  $color-facebook: #3b5998;
+  $color-instagram: #f09433;
+  $color-twitter: #55acee;
+
+
+/*************************************/
+/**          Color Helpers          **/
+/*************************************/
+
+/** Backgrounds */
+
+.bg-primary {
+  background-color: $color-primary;
+}
+.bg-accent {
+  background-color: $color-accent;
+}
+.bg-red {
+  background-color: $color-red;
+}
+.bg-red-dark {
+  background-color: $color-red-dark;
+}
+.bg-purple {
+  background-color: $color-purple;
+}
+.bg-purple-dark {
+  background-color: $color-purple-dark;
+}
+.bg-deeppurple {
+  background-color: $color-deeppurple;
+}
+.bg-deeppurple-dark {
+  background-color: $color-deeppurple-dark;
+}
+.bg-indigo {
+  background-color: $color-indigo;
+}
+.bg-indigo-dark {
+  background-color: $color-indigo-dark;
+}
+.bg-blue {
+  background-color: $color-blue;
+}
+.bg-blue-dark {
+  background-color: $color-blue-dark;
+}
+.bg-cyan {
+  background-color: $color-cyan;
+}
+.bg-cyan-dark {
+  background-color: $color-cyan-dark;
+}
+.bg-teal {
+  background-color: $color-teal;
+}
+.bg-teal-dark {
+  background-color: $color-teal-dark;
+}
+.bg-green {
+  background-color: $color-green;
+}
+.bg-green-dark {
+  background-color: $color-green-dark;
+}
+.bg-lightgreen {
+  background-color: $color-lightgreen;
+}
+.bg-lightgreen-dark {
+  background-color: $color-lightgreen-dark;
+}
+.bg-yellow {
+  background-color: $color-yellow;
+}
+.bg-yellow-dark {
+  background-color: $color-yellow-dark;
+}
+.bg-amber {
+  background-color: $color-amber;
+}
+.bg-amber-dark {
+  background-color: $color-amber-dark;
+}
+.bg-orange {
+  background-color: $color-orange;
+}
+.bg-orange-dark {
+  background-color: $color-orange-dark;
+}
+.bg-deeporange {
+  background-color: $color-deeporange;
+}
+.bg-deeporange-dark {
+  background-color: $color-deeporange-dark;
+}
+.bg-grey {
+  background-color: $color-grey;
+}
+.bg-grey-dark {
+  background-color: $color-grey-dark;
+}
+.bg-bluegrey {
+  background-color: $color-bluegrey;
+}
+.bg-bluegrey-dark {
+  background-color: $color-bluegrey-dark;
+}
+.bg-light {
+  background-color: $color-light;
+}
+.bg-light-secondary {
+  background-color: $color-light-secondary;
+}
+.bg-dark {
+  background-color: $color-dark;
+}
+.bg-dark-secondary {
+  background-color: $color-dark-secondary;
+}
+.bg-white {
+  background-color: $color-white;
+}
+.bg-white-muted {
+  background-color: $color-white-muted;
+}
+.bg-black {
+  background-color: $color-black;
+}
+.bg-black-muted {
+  background-color: $color-black-muted;
+}
+
+/** Gradients */
+.bg-gradient-primary {
+  background: $color-gradient-primary;
+}
+.bg-gradient-accent {
+  background: $color-gradient-accent;
+}
+.bg-gradient-light {
+  background: $color-gradient-light;
+}
+.bg-gradient-dark {
+  background: $color-gradient-dark;
+}
+.bg-gradient-red {
+  background: $color-gradient-red;
+}
+.bg-gradient-purple {
+  background: $color-gradient-purple;
+}
+.bg-gradient-deeppurple {
+  background: $color-gradient-deeppurple;
+}
+.bg-gradient-indigo {
+  background: $color-gradient-indigo;
+}
+.bg-gradient-blue {
+  background: $color-gradient-blue;
+}
+.bg-gradient-cyan {
+  background: $color-gradient-cyan;
+}
+.bg-gradient-teal {
+  background: $color-gradient-teal;
+}
+.bg-gradient-green {
+  background: $color-gradient-green;
+}
+.bg-gradient-lightgreen {
+  background: $color-gradient-lightgreen;
+}
+.bg-gradient-yellow {
+  background: $color-gradient-yellow;
+}
+.bg-gradient-amber {
+  background: $color-gradient-amber;
+}
+.bg-gradient-orange {
+  background: $color-gradient-orange;
+}
+.bg-gradient-deeporange {
+  background: $color-gradient-deeporange;
+}
+.bg-gradient-grey {
+  background: $color-gradient-grey;
+}
+.bg-gradient-bluegrey {
+  background: $color-gradient-bluegrey;
+}
+
+
+/** Text */
+.txt-primary {
+  color: $color-primary;
+}
+.txt-accent {
+  color: $color-accent;
+}
+.txt-red {
+  color: $color-red;
+}
+.txt-purple {
+  color: $color-purple;
+}
+.txt-deeppurple {
+  color: $color-deeppurple;
+}
+.txt-indigo {
+  color: $color-indigo;
+}
+.txt-blue {
+  color: $color-blue;
+}
+.txt-cyan {
+  color: $color-cyan;
+}
+.txt-teal {
+  color: $color-teal;
+}
+.txt-green {
+  color: $color-green;
+}
+.txt-lightgreen {
+  color: $color-lightgreen;
+}
+.txt-yellow {
+  color: $color-yellow;
+}
+.txt-amber {
+  color: $color-amber;
+}
+.txt-orange {
+  color: $color-orange;
+}
+.txt-deeporange {
+  color: $color-deeporange;
+}
+.txt-grey {
+  color: $color-grey;
+}
+.txt-bluegrey {
+  color: $color-bluegrey;
+}
+.txt-white {
+  color: $color-white;
+}
+.txt-white-muted {
+  color: $color-white-muted;
+}
+.txt-black {
+  color: $color-black;
+}
+.txt-black-muted {
+  color: $color-black-muted;
+}
+.txt-light {
+  color: $color-light;
+}
+.txt-light-muted {
+  color: rgba($color-light, 0.54);
+}
+.txt-dark {
+  color: $color-dark;
+}
+.txt-dark-muted {
+  color: rgba($color-dark, 0.54);
+}

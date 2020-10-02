@@ -1,0 +1,25 @@
+.navlist-header-container {
+  height: 60px;
+  padding: 0;
+}
+
+.navlist-header-icon {
+  width: 80px;
+
+  & mat-icon {
+    font-size: 32px;
+    width: 32px;
+    height: 32px;
+  }
+}
+
+.navlist-header-text {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 18px;
+  width: calc(100% - 80px);
+}
+
+.navlink-expandable {
+  background: #fafafa;
+}
+

@@ -1,1 +1,55 @@
-/* You can add global styles to this file, and also import other style files */
+/* Imports. */
+@import '~bootstrap/scss/bootstrap';
+@import './colors.scss';
+
+/* Global styles */
+body { 
+  margin: 0; 
+  font-family: Roboto, "Helvetica Neue", sans-serif; 
+  height: 10vh;
+  width: 100vw;
+  overflow: hidden; 
+}
+
+.container {
+  max-width: 1440px;
+  padding-left: 48px;
+  padding-right: 48px
+}
+
+.active {
+  background-color: rgba($color-primary, 0.15) !important;
+  color: $color-primary !important;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.separator {
+  background-color: rgba(0, 0, 0, 0.12);
+  height: 1px;
+  margin: 0 10px;
+}
+
+button:focus {
+  outline: none !important;
+}
+
+.scroll-content-wrapper {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+}
+
+.scroll-content {
+  display: flex;
+  min-height: min-content;
+  max-height: 100%;
+}
+
+.simplebar-scrollbar::before {
+  background-color: rgba(0, 0, 0, .5) !important;
+}
+
+

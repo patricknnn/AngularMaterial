@@ -1,0 +1,25 @@
+<mat-toolbar class="main-toolbar">
+  <button mat-icon-button (click)="toggleSidenav()" class="mr-2">
+    <mat-icon>menu</mat-icon>
+  </button>
+
+  <img src="../../../assets/logo seacrew.jpg" alt="Seacrew logo" class="brand-img">
+
+  <span>Anker Seacrew</span>
+  <span class="spacer"></span>
+
+
+  <button mat-button [matMenuTriggerFor]="profileMenu">John Doe</button>
+  <mat-menu #profileMenu="matMenu" xPosition="before">
+    <button mat-menu-item routerLink="/profile">
+      <mat-icon class="material-icons-two-tone">account_circle</mat-icon>
+      <span>Account</span>
+    </button>
+    <button mat-menu-item routerLink="/logout">
+      <mat-icon class="material-icons-two-tone">remove_circle</mat-icon>
+      <span>Logout</span>
+    </button>
+
+  </mat-menu>
+
+</mat-toolbar>

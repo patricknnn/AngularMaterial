@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <app-header title="Dashboard" subtitle="Good day to you." icon="dashboard"></app-header>
+    </div>
+  </div>
+
+  <div class="row pt-5">
+    <div *ngFor="let card of iconCards" class="col-lg-4 col-md-6 col-sm-12">
+      <app-icon-card number={{card.number}} title="{{card.title}}" icon="{{card.icon}}" subtitle="{{card.subtitle}}" subtitleIcon="{{card.subtitleIcon}}"></app-icon-card>
+    </div>
+  </div>
+
+  <div class="row">
+    <div style="height: 4000px;">
+
+    </div>
+  </div>
+</div>
