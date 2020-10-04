@@ -13,6 +13,8 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 import { HeaderComponent } from './components/header/header.component';
 import { SimplebarAngularModule } from 'simplebar-angular';
 import { IconCardComponent } from './components/icon-card/icon-card.component';
+import { TypographyComponent } from './components/typography/typography.component';
+import { HeaderSmallComponent } from './components/header-small/header-small.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { IconCardComponent } from './components/icon-card/icon-card.component';
     DashboardComponent,
     PageNotFoundComponent,
     HeaderComponent,
-    IconCardComponent
+    IconCardComponent,
+    TypographyComponent,
+    HeaderSmallComponent
   ],
   imports: [
     BrowserModule,

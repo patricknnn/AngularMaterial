@@ -1,25 +1,25 @@
 /* Imports. */
-@import '~bootstrap/scss/bootstrap';
-@import './colors.scss';
+@import "~bootstrap/scss/bootstrap";
+@import "./colors.scss";
 
 /* Global styles */
-body { 
-  margin: 0; 
-  font-family: Roboto, "Helvetica Neue", sans-serif; 
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
   height: 10vh;
   width: 100vw;
-  overflow: hidden; 
+  overflow: hidden;
 }
 
 .container {
   max-width: 1440px;
   padding-left: 48px;
-  padding-right: 48px
+  padding-right: 48px;
 }
 
 .active {
-  background-color: rgba($color-indigo, 0.15) !important;
-  color: $color-indigo !important;
+  background-color: rgba($color-primary, 0.15) !important;
+  color: $color-primary !important;
 }
 
 .spacer {
@@ -49,7 +49,5 @@ button:focus {
 }
 
 .simplebar-scrollbar::before {
-  background-color: rgba(0, 0, 0, .5) !important;
+  background-color: rgba(0, 0, 0, 0.5) !important;
 }
-
-

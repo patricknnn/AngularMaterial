@@ -11,9 +11,9 @@ export class DashboardComponent implements OnInit {
 
   constructor() {
     this.iconCards = [
-      new iconcard(170, "new users", "person_add", "this month", "schedule"),
-      new iconcard(5, "birthdays", "cake", "this week", "schedule"),
-      new iconcard(12, "activities", "event_note", "this month", "schedule"),
+      new iconcard("", "Angular 10", "construction", "The latest version of angular", ""),
+      new iconcard("", "Material Design", "design_services", "Angular material and material design", ""),
+      new iconcard("", "Material Icons", "insert_emoticon", "Google's material icon set", "info"),
     ]
   }
 

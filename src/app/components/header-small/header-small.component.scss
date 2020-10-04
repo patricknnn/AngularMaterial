@@ -1,33 +1,33 @@
 
-$title-size: 48px;
+$title-size: 30px;
 
-.header-container {
+.header-small-container {
   align-items: center;
   border-bottom: 1px solid rgba(0, 0, 0, 0.12);
   padding: 40px 0px;
-  margin-top: 56px;
+  margin-top: 30px;
 }
 
-.header-title-container {
+.header-small-title-container {
   margin-bottom: 24px;
   align-items: center;
 }
 
-.header-title-icon {
+.header-small-title-icon {
   height: $title-size;
   width: $title-size;
   font-size: $title-size;
   vertical-align: center;
 }
 
-.header-title-text {
+.header-small-title-text {
   color: rgba(0,0,0,.87);
   font-size: $title-size;
   font-weight: 400;
   margin: 0px;
 }
 
-.header-subtitle-text {
+.header-small-subtitle-text {
   margin-bottom: 0px;
   padding-right: 40px;
   max-width: 700px;
