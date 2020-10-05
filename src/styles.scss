@@ -2,6 +2,9 @@
 @import "~bootstrap/scss/bootstrap";
 @import "./colors.scss";
 
+/* Theme */
+$container-padding: 48px;
+
 /* Global styles */
 body {
   margin: 0;
@@ -13,12 +16,12 @@ body {
 
 .container {
   max-width: 1440px;
-  padding-left: 48px;
-  padding-right: 48px;
+  padding-left: $container-padding;
+  padding-right: $container-padding;
 }
 
 .active {
-  background-color: rgba($color-primary, 0.15) !important;
+  background-color: rgba($color-primary, 0.1) !important;
   color: $color-primary !important;
 }
 

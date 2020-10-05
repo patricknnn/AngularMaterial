@@ -1,19 +1,11 @@
 @import "~@angular/material/theming";
 
-// Custom typography
-$custom-typography: mat-typography-config(
-  $font-family: "Poppins, sans-serif",
-  $headline: mat-typography-level(2rem, 2.3rem, 700),
-  $body-1: mat-typography-level(1rem, 1.15rem, 400),
-);
-
 // Common styles for Angular Material.
-// @include mat-core($custom-typography);
 @include mat-core();
 
 // Light theme.
 $light-primary: mat-palette($mat-blue);
-$light-accent: mat-palette($mat-pink);
+$light-accent: mat-palette($mat-orange);
 $light-warn: mat-palette($mat-deep-orange);
 $light-theme: mat-light-theme(
   (
@@ -27,7 +19,7 @@ $light-theme: mat-light-theme(
 
 // Dark theme.
 $dark-primary: mat-palette($mat-blue);
-$dark-accent: mat-palette($mat-pink);
+$dark-accent: mat-palette($mat-orange);
 $dark-warn: mat-palette($mat-deep-orange);
 $dark-theme: mat-dark-theme(
   (

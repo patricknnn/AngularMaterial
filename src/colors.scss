@@ -1,6 +1,8 @@
 /* Anker */
-$color-anker-primary: #002b58;
+$color-anker-primary: #3a5385;
+$color-anker-primary-dark: #002b58;
 $color-anker-accent: #ab0035;
+$color-anker-accent-dark: #740010;
 
 /* Material */
 $color-red: #f44336;
@@ -106,11 +108,11 @@ $color-facebook: #3b5998;
 $color-instagram: #f09433;
 $color-twitter: #55acee;
 
-// define primary and accent colors
-$color-primary: $color-blue;
+/* Theme */
+$color-primary: $color-indigo;
 $color-accent: $color-orange;
-$color-gradient-primary: linear-gradient(60deg, $color-blue, $color-blue-dark);
-$color-gradient-accent: linear-gradient(60deg, $color-orange, $color-orange-dark);
+$color-gradient-primary: $color-gradient-indigo;
+$color-gradient-accent: $color-gradient-orange;
 
 /*************************************/
 /**          Color Helpers          **/
