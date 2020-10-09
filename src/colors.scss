@@ -1,8 +1,7 @@
 /* Anker */
-$color-anker-primary: #3a5385;
-$color-anker-primary-dark: #002b58;
-$color-anker-accent: #ab0035;
-$color-anker-accent-dark: #740010;
+$color-anker-primary: #002b58;
+$color-anker-primary-dark: #122e49;
+$color-anker-accent: #a4d2f0;
 
 /* Material */
 $color-red: #f44336;
@@ -89,7 +88,7 @@ $color-dark-secondary: #212121;
 $color-black: #000;
 $color-black-muted: rgba(0, 0, 0, 0.65);
 $color-light: #fafafa;
-$color-light-secondary: #eeeeee;
+$color-light-secondary: #f5f4f4;
 $color-white: #fff;
 $color-white-muted: rgba(255, 255, 255, 0.65);
 $color-gradient-dark: linear-gradient(
@@ -109,10 +108,11 @@ $color-instagram: #f09433;
 $color-twitter: #55acee;
 
 /* Theme */
-$color-primary: $color-indigo;
-$color-accent: $color-orange;
-$color-gradient-primary: $color-gradient-indigo;
-$color-gradient-accent: $color-gradient-orange;
+$color-primary: $color-anker-primary;
+$color-primary-dark: $color-anker-primary-dark;
+$color-accent: $color-anker-accent;
+$color-gradient-primary: $color-gradient-bluegrey;
+$color-gradient-accent: $color-gradient-cyan;
 
 /*************************************/
 /**          Color Helpers          **/
@@ -121,10 +121,13 @@ $color-gradient-accent: $color-gradient-orange;
 /** Backgrounds */
 
 .bg-primary {
-  background-color: $color-primary;
+  background-color: $color-primary !important;
+}
+.bg-primary-dark {
+  background-color: $color-primary-dark !important;
 }
 .bg-accent {
-  background-color: $color-accent;
+  background-color: $color-accent !important;
 }
 .bg-red {
   background-color: $color-red;
@@ -303,6 +306,9 @@ $color-gradient-accent: $color-gradient-orange;
 /** Text */
 .txt-primary {
   color: $color-primary;
+}
+.txt-primary-dark {
+  color: $color-primary-dark;
 }
 .txt-accent {
   color: $color-accent;
