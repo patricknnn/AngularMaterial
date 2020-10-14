@@ -14,6 +14,7 @@ export class DashboardComponent implements OnInit {
       new iconcard("", "Angular 10", "construction", "The latest version of angular", ""),
       new iconcard("", "Material Design", "design_services", "Angular material and material design", ""),
       new iconcard("", "Material Icons", "insert_emoticon", "Google's material icon set", "info"),
+      new iconcard("", "Angular router", "directions", "Angular's internal router component.", "")
     ]
   }
 

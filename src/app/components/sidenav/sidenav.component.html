@@ -3,7 +3,7 @@
   <!-- Header -->
   <div class="d-flex flex-row navlist-header-container">
     <div class="d-flex align-items-center justify-content-center h-100 navlist-header-icon">
-      <mat-icon class="material-icons-two-tone">directions_boat</mat-icon>
+      <mat-icon class="material-icons-outlined">directions_boat</mat-icon>
     </div>
     <div class="d-flex align-items-center navlist-header-text">
       <span class="font-weight-bold">Company</span>
@@ -20,7 +20,7 @@
       <div *ngFor="let navlink of navlinks" class="navlink-wrapper">
         <!-- Without children -->
         <a mat-list-item *ngIf="!navlink.children" routerLink="{{navlink.routerLink}}" routerLinkActive="active">
-          <mat-icon class="material-icons-two-tone">{{navlink.icon}}</mat-icon>
+          <mat-icon class="material-icons-outlined">{{navlink.icon}}</mat-icon>
           <span class="pl-2">{{navlink.text}}</span>
         </a>
 
@@ -28,13 +28,13 @@
         <mat-expansion-panel *ngIf="navlink.children" class="navlink-expandable mat-elevation-z0">
           <mat-expansion-panel-header style="padding: 0 16px;">
             <div class="d-flex align-items-center">
-              <mat-icon class="material-icons-two-tone">{{navlink.icon}}</mat-icon>
+              <mat-icon class="material-icons-outlined">{{navlink.icon}}</mat-icon>
               <span class="pl-2">{{navlink.text}}</span>
             </div>
           </mat-expansion-panel-header>
 
           <a mat-list-item *ngFor="let child of navlink.children" routerLink="{{child.routerLink}}" routerLinkActive="active">
-            <mat-icon class="material-icons-two-tone">{{child.icon}}</mat-icon>
+            <mat-icon class="material-icons-outlined">{{child.icon}}</mat-icon>
             <span class="pl-2">{{child.text}}</span>
           </a>
         </mat-expansion-panel>
@@ -49,7 +49,7 @@
     <div class="separator flex-row flex-shrink-0 mb-2"></div>
 
     <a mat-list-item routerLink="/settings">
-      <mat-icon class="material-icons-two-tone">settings</mat-icon>
+      <mat-icon class="material-icons-outlined">settings</mat-icon>
       <span class="pl-2">Settings</span>
     </a>
   </div>
