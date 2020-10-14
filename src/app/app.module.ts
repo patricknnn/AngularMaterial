@@ -15,6 +15,8 @@ import { SimplebarAngularModule } from 'simplebar-angular';
 import { IconCardComponent } from './components/icon-card/icon-card.component';
 import { TypographyComponent } from './components/typography/typography.component';
 import { HeaderSmallComponent } from './components/header-small/header-small.component';
+import { ButtonsComponent } from './components/buttons/buttons.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { HeaderSmallComponent } from './components/header-small/header-small.com
     HeaderComponent,
     IconCardComponent,
     TypographyComponent,
-    HeaderSmallComponent
+    HeaderSmallComponent,
+    ButtonsComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

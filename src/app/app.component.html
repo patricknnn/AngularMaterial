@@ -18,18 +18,15 @@
     </mat-sidenav>
 
     <!-- Sidenav content -->
-    <mat-sidenav-content
-      [style]="mobileQuery.matches ? 'padding-top: 56px' : 'padding-top: 64px'"
-    >
+    <mat-sidenav-content [style]="mobileQuery.matches ? 'padding-top: 56px' : 'padding-top: 64px'">
       <div class="d-flex flex-column h-100 scroll-content-wrapper">
-        <ngx-simplebar
-          [options]="simplebarOptions"
-          class="d-flex flex-column scroll-content"
-        >
+        <ngx-simplebar [options]="simplebarOptions" class="d-flex flex-column scroll-content h-100">
           <!-- Router Outlet -->
           <div [@fadeAnimation]="getRouterOutletState(o)">
             <router-outlet #o="outlet"></router-outlet>
           </div>
+          <!-- Footer -->
+          <app-footer></app-footer>
         </ngx-simplebar>
       </div>
     </mat-sidenav-content>

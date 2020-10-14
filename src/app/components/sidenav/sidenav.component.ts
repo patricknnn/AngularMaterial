@@ -27,7 +27,7 @@ export class SidenavComponent implements OnInit {
       new navlink("Icons", "insert_photo", "/icons"),
       new navlink("Badges", "verified", "/badges"),
     ];
-    this.simplebarOptions = {autoHide: false};
+    this.simplebarOptions = {autoHide: true};
   }
 
   ngOnInit(): void {

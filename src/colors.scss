@@ -2,6 +2,12 @@
 $color-anker-primary: #002b58;
 $color-anker-primary-dark: #122e49;
 $color-anker-accent: #a4d2f0;
+$color-gradient-anker: linear-gradient(
+  60deg,
+  $color-anker-primary,
+  $color-anker-primary-dark
+);
+
 
 /* Material */
 $color-red: #f44336;
@@ -111,8 +117,7 @@ $color-twitter: #55acee;
 $color-primary: $color-anker-primary;
 $color-primary-dark: $color-anker-primary-dark;
 $color-accent: $color-anker-accent;
-$color-gradient-primary: $color-gradient-bluegrey;
-$color-gradient-accent: $color-gradient-cyan;
+$color-gradient-primary: $color-gradient-anker;
 
 /*************************************/
 /**          Color Helpers          **/
@@ -249,7 +254,7 @@ $color-gradient-accent: $color-gradient-cyan;
   background: $color-gradient-primary;
 }
 .bg-gradient-accent {
-  background: $color-gradient-accent;
+  background: $color-gradient-amber;
 }
 .bg-gradient-light {
   background: $color-gradient-light;
