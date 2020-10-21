@@ -1,0 +1,48 @@
+<div class="d-flex align-items-center justify-content-center login-wrapper">
+
+  <mat-card>
+    <div class="center-card-avatar mat-elevation-z4">
+      <img src="../../../assets/logo seacrew.jpg" alt="Seacrew logo"
+        class="w-100 brand-img rounded-circle img-thumbnail">
+    </div>
+
+    <mat-card-content class="mt-4">
+      <div class="col-12 text-center pb-2">
+        <h1 class="txt-primary mb-2">Anker Seacrew</h1>
+        <mat-divider></mat-divider>
+        <p class="txt-dark-muted pt-2">Please sign in to your Anker Seacrew account</p>
+      </div>
+
+      <div [formGroup]="loginForm">
+        <div class="col-12 p-0">
+          <mat-form-field appearance="fill" class="w-100">
+            <mat-label>Username</mat-label>
+            <input matInput placeholder="Username" name="username" formControlName="username">
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          </mat-form-field>
+        </div>
+
+        <div class="col-12 p-0">
+          <mat-form-field appearance="fill" class="w-100">
+            <mat-label>Password</mat-label>
+            <input matInput [type]="hidePassword ? 'password' : 'text'" name="password" formControlName="password">
+            <button mat-icon-button matSuffix (click)="hidePassword = !hidePassword" [attr.aria-label]="'Hide password'"
+              [attr.aria-pressed]="hidePassword">
+              <mat-icon>{{hidePassword ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+          </mat-form-field>
+        </div>
+      </div>
+
+
+      <div class="col-12 p-0">
+        <div class="d-flex align-items-center justify-content-center w-100">
+          <button mat-raised-button color="primary" (click)="login()" [disabled]="!loginForm.valid">Sign in</button>
+        </div>
+      </div>
+
+    </mat-card-content>
+
+  </mat-card>
+
+</div>

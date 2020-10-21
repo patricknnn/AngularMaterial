@@ -1,0 +1,16 @@
+@import "../../../colors.scss";
+
+.center-card-avatar {
+  margin: -50px auto 0 !important;
+  border-radius: 50%;
+  overflow: hidden;
+  padding: 0;
+  width: 130px;
+  max-width: 130px;
+  max-height: 130px;
+}
+
+.login-wrapper {
+  height: 100vh;
+  width: 100vw;
+}

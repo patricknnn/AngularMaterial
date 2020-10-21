@@ -1,18 +1,13 @@
 <!-- Main container -->
-<div class="main-container" [class.is-mobile]="mobileQuery.matches">
+<div class="main-container" [class.is-mobile]="mobileQuery.matches" *ngIf="isLoggedIn()">
   <!-- Navbar component -->
   <app-navbar></app-navbar>
 
   <!-- Sidenav caontainer -->
   <mat-sidenav-container class="main-sidenav-container">
     <!-- Sidenav -->
-    <mat-sidenav
-      #sidenav
-      [mode]="mobileQuery.matches ? 'over' : 'side'"
-      [fixedInViewport]="true"
-      [fixedTopGap]="mobileQuery.matches ? '56' : '64'"
-      opened
-    >
+    <mat-sidenav #sidenav [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="true"
+      [fixedTopGap]="mobileQuery.matches ? '56' : '64'" opened>
       <!-- Sidenav component -->
       <app-sidenav></app-sidenav>
     </mat-sidenav>
@@ -26,9 +21,11 @@
             <router-outlet #o="outlet"></router-outlet>
           </div>
           <!-- Footer -->
-          <app-footer></app-footer>
+          <!-- <app-footer></app-footer> -->
         </ngx-simplebar>
       </div>
     </mat-sidenav-content>
   </mat-sidenav-container>
 </div>
+
+<app-login *ngIf="!isLoggedIn()"></app-login>

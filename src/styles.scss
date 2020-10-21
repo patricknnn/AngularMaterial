@@ -22,7 +22,6 @@ body {
 
 .active {
   background-color: rgba($color-primary, 0.15) !important;
-  color: $color-primary-dark !important;
 }
 
 .spacer {
@@ -57,4 +56,10 @@ button:focus {
 
 .simplebar-content {
   min-height: 100%;
+}
+
+.mat-dialog-container {
+  overflow: visible !important;
+  padding: 0 !important;
+  background: transparent !important;
 }

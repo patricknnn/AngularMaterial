@@ -8,13 +8,15 @@ import { SidenavService } from 'src/app/services/sidenav.service';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor(private sidenav: SidenavService) { }
+  constructor(
+    private sidenav: SidenavService
+  ) { }
 
   ngOnInit(): void {
   }
 
   toggleSidenav() {
     this.sidenav.toggle();
- }
+  }
 
 }
