@@ -12,7 +12,6 @@ const routes: Routes = [
   { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
 
   // Page redirects
-  { path: 'login', component: LoginComponent },
   { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
   { path: 'typography', component: TypographyComponent, canActivate: [AuthGuard] },
   { path: 'buttons', component: ButtonsComponent, canActivate: [AuthGuard] },

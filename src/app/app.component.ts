@@ -2,6 +2,7 @@ import { MediaMatcher } from '@angular/cdk/layout';
 import { AfterViewInit, ChangeDetectorRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { Component } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
+import { AuthService } from './auth/auth.service';
 import { fadeAnimation } from './route-animations';
 import { SidenavService } from './services/sidenav.service';
 
@@ -17,6 +18,7 @@ export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
   title = 'Anker Seacrew';
   mobileQuery: MediaQueryList;
   public simplebarOptions: object;
+  loggedIn: boolean;
 
   /**
    * Constructor
@@ -27,7 +29,8 @@ export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
   constructor(
     changeDetectorRef: ChangeDetectorRef,
     media: MediaMatcher,
-    private sidenavService: SidenavService
+    private sidenavService: SidenavService,
+    private authService: AuthService
   ) {
     this.mobileQuery = media.matchMedia('(max-width: 600px)');
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();
@@ -36,6 +39,7 @@ export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   ngOnInit(): void {
+    this.loggedIn = this.authService.isLoggedIn();
   }
 
   ngAfterViewInit(): void {
