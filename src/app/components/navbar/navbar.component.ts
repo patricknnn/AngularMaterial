@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from 'src/app/auth/auth.service';
 import { SidenavService } from 'src/app/services/sidenav.service';
 
 @Component({
@@ -9,7 +10,8 @@ import { SidenavService } from 'src/app/services/sidenav.service';
 export class NavbarComponent implements OnInit {
 
   constructor(
-    private sidenav: SidenavService
+    private sidenav: SidenavService,
+    private authService: AuthService
   ) { }
 
   ngOnInit(): void {
@@ -17,6 +19,10 @@ export class NavbarComponent implements OnInit {
 
   toggleSidenav() {
     this.sidenav.toggle();
+  }
+
+  logOut() {
+    this.authService.logout();
   }
 
 }

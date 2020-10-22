@@ -2,7 +2,6 @@ import { MediaMatcher } from '@angular/cdk/layout';
 import { AfterViewInit, ChangeDetectorRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { Component } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
-import { AuthService } from './auth/auth.service';
 import { fadeAnimation } from './route-animations';
 import { SidenavService } from './services/sidenav.service';
 
@@ -28,8 +27,7 @@ export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
   constructor(
     changeDetectorRef: ChangeDetectorRef,
     media: MediaMatcher,
-    private sidenavService: SidenavService,
-    private authService: AuthService
+    private sidenavService: SidenavService
   ) {
     this.mobileQuery = media.matchMedia('(max-width: 600px)');
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();
@@ -52,7 +50,4 @@ export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
     return outlet.isActivated ? outlet.activatedRoute : '';
   }
 
-  isLoggedIn(): boolean {
-    return this.authService.isLoggedIn();
-  }
 }

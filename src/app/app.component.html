@@ -1,5 +1,5 @@
 <!-- Main container -->
-<div class="main-container" [class.is-mobile]="mobileQuery.matches" *ngIf="isLoggedIn()">
+<div class="main-container" [class.is-mobile]="mobileQuery.matches">
   <!-- Navbar component -->
   <app-navbar></app-navbar>
 
@@ -27,5 +27,3 @@
     </mat-sidenav-content>
   </mat-sidenav-container>
 </div>
-
-<app-login *ngIf="!isLoggedIn()"></app-login>

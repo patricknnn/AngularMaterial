@@ -13,16 +13,8 @@ export class AuthService {
   constructor(private http: HttpClient) {
   }
 
-  loginViaUrl(username: string, password: string) {
-    return this.http.get<any>(API_URL + 'loginViaUrl?username=' + username + '&password=' + password)
-    .pipe(
-      tap(res => this.setSession(res)),
-      shareReplay()
-    )
-  }
-
-  login(username: string, password: string) {
-    return this.http.post<user>(API_URL + 'login', {username, password})
+  login(data: FormData) {
+    return this.http.post<user>(API_URL + 'login', data)
       .pipe(
         tap(res => this.setSession(res)),
         shareReplay()
@@ -30,22 +22,28 @@ export class AuthService {
   }
 
   private setSession(authResult) {
-    console.log(authResult);
+    var str = authResult.expiresAt;
+    var year = str.substring(0, 4);
+    var month = str.substring(4, 6);
+    var day = str.substring(6, 8);
+    var hour = str.substring(8, 10);
+    var minute = str.substring(10, 12);
+    var second = str.substring(12, 14);
 
-    let date = new Date();
-    const expiresAt = date.setSeconds(date.getSeconds() + authResult.exp);
+    const expiresAt = new Date(year, month - 1, day, hour, minute, second)
 
-    localStorage.setItem('id_token', authResult.jti);
+    localStorage.setItem('id_token', authResult.idToken);
     localStorage.setItem("expires_at", JSON.stringify(expiresAt.valueOf()));
   }
 
   logout() {
     localStorage.removeItem("id_token");
     localStorage.removeItem("expires_at");
+    window.location.reload();
   }
 
   public isLoggedIn() {
-    return new Date() < this.getExpiration();
+    return new Date() < new Date(this.getExpiration());
   }
 
   isLoggedOut() {
