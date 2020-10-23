@@ -13,7 +13,7 @@
         <p class="txt-dark-muted pt-2">Please sign in to your Anker Seacrew account</p>
       </div>
 
-      <div [formGroup]="loginForm">
+      <form [formGroup]="loginForm" (ngSubmit)="login()">
         <div class="col-12 p-0">
           <mat-form-field appearance="fill" class="w-100">
             <mat-label>Username</mat-label>
@@ -32,14 +32,13 @@
             </button>
           </mat-form-field>
         </div>
-      </div>
 
-
-      <div class="col-12 p-0">
-        <div class="d-flex align-items-center justify-content-center w-100">
-          <button mat-raised-button color="primary" (click)="login()" [disabled]="!loginForm.valid">Sign in</button>
+        <div class="col-12 p-0">
+          <div class="d-flex align-items-center justify-content-center w-100">
+            <button mat-raised-button color="primary" type="submit" [disabled]="!loginForm.valid">Sign in</button>
+          </div>
         </div>
-      </div>
+      </form>
 
     </mat-card-content>
 

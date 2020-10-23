@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { navlink } from 'src/app/models/navlink';
+import { Navlink } from 'src/app/models/navlink';
 import { MenuService } from 'src/app/services/menu.service';
 
 @Component({
@@ -8,7 +8,7 @@ import { MenuService } from 'src/app/services/menu.service';
   styleUrls: ['./sidenav.component.scss']
 })
 export class SidenavComponent implements OnInit {
-  public navlinks: navlink[];
+  public navlinks: Navlink[];
   public simplebarOptions: object;
 
   constructor(

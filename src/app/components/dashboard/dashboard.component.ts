@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { iconcard } from 'src/app/models/iconCard';
+import { Iconcard } from 'src/app/models/iconCard';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,14 +7,17 @@ import { iconcard } from 'src/app/models/iconCard';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
-  public iconCards: iconcard[];
+  public iconCards: Iconcard[];
 
   constructor() {
     this.iconCards = [
-      new iconcard("", "Angular 10", "construction", "The latest version of angular", ""),
-      new iconcard("", "Material Design", "design_services", "Angular material and material design", ""),
-      new iconcard("", "Material Icons", "insert_emoticon", "Google's material icon set", "info"),
-      new iconcard("", "Angular router", "directions", "Angular's internal router component.", "")
+      new Iconcard("", "Angular 10", "construction", "The latest version of angular", ""),
+      new Iconcard("", "Angular router", "directions", "Navigate between views", ""),
+      new Iconcard("", "Angular animations", "slow_motion_video", "Enhance user experience", ""),
+      new Iconcard("", "Material Design", "design_services", "Google's design guidelines", ""),
+      new Iconcard("", "Material Icons", "insert_emoticon", "Google's material icon set", "info"),
+      new Iconcard("", "Forms", "description", "Including input validation", "done"),
+      new Iconcard("", "Authentication", "verified_user", "Using JSON Web Tokens", ""),
     ]
   }
 

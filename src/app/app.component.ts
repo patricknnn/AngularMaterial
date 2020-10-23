@@ -22,15 +22,16 @@ export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
 
   /**
    * Constructor
+   * @param sidenavService Sidenav service 
+   * @param authService Authentication service
    * @param changeDetectorRef Change detector
    * @param media Media
-   * @param sidenavService Sidenav service 
    */
   constructor(
-    changeDetectorRef: ChangeDetectorRef,
-    media: MediaMatcher,
     private sidenavService: SidenavService,
-    private authService: AuthService
+    private authService: AuthService,
+    changeDetectorRef: ChangeDetectorRef,
+    media: MediaMatcher
   ) {
     this.mobileQuery = media.matchMedia('(max-width: 600px)');
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();

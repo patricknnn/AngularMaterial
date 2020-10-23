@@ -5,9 +5,9 @@
     </div>
   </div>
 
-  <div class="row pt-5">
+  <div class="row">
     <div *ngFor="let card of iconCards" class="col-lg-4 col-md-6 col-sm-12">
-      <app-icon-card number={{card.number}} title="{{card.title}}" icon="{{card.icon}}" subtitle="{{card.subtitle}}" subtitleIcon="{{card.subtitleIcon}}"></app-icon-card>
+      <app-icon-card number="{{card.number}}" title="{{card.title}}" icon="{{card.icon}}" subtitle="{{card.subtitle}}" subtitleIcon="{{card.subtitleIcon}}"></app-icon-card>
     </div>
   </div>
 

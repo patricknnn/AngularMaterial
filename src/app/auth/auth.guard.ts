@@ -12,10 +12,7 @@ export class AuthGuard implements CanActivate {
     private router: Router
   ) { }
 
-  canActivate(
-    next: ActivatedRouteSnapshot,
-    state: RouterStateSnapshot
-  ): true | UrlTree {
+  canActivate(next: ActivatedRouteSnapshot, state: RouterStateSnapshot): true | UrlTree {
     if (this.authService.isLoggedIn()) {
       return true;
     }

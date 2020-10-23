@@ -1,4 +1,4 @@
-export class iconcard {
+export class Iconcard {
   constructor(
     public number: string,
     public title: string,

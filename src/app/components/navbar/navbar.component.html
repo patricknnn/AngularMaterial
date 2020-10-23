@@ -8,13 +8,8 @@
   <span>Anker Seacrew</span>
   <span class="spacer"></span>
 
-
-  <button mat-button [matMenuTriggerFor]="profileMenu">John Doe</button>
+  <button mat-button [matMenuTriggerFor]="profileMenu" *ngIf="username" class="text-capitalize">{{username}}</button>
   <mat-menu #profileMenu="matMenu" xPosition="before">
-    <button mat-menu-item routerLink="/login">
-      <mat-icon class="material-icons-outlined">login</mat-icon>
-      <span class="pr-3">Login</span>
-    </button>
     <button mat-menu-item (click)="logOut()">
       <mat-icon class="material-icons-outlined">clear</mat-icon>
       <span class="pr-3">Logout</span>

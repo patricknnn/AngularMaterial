@@ -3,9 +3,77 @@
 // Common styles for Angular Material.
 @include mat-core();
 
+// Custom palettes
+$anker-primary-palette: (
+    50 : #e0e6eb,
+    100 : #b3bfcd,
+    200 : #8095ac,
+    300 : #4d6b8a,
+    400 : #264b71,
+    500 : #002b58,
+    600 : #002650,
+    700 : #002047,
+    800 : #001a3d,
+    900 : #00102d,
+    A100 : #668aff,
+    A200 : #3363ff,
+    A400 : #003bff,
+    A700 : #0036e6,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #ffffff,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #ffffff,
+        A400 : #ffffff,
+        A700 : #ffffff,
+    )
+);
+
+$anker-accent-palette: (
+    50 : #f4fafd,
+    100 : #e4f2fb,
+    200 : #d2e9f8,
+    300 : #bfe0f5,
+    400 : #b2d9f2,
+    500 : #a4d2f0,
+    600 : #9ccdee,
+    700 : #92c7ec,
+    800 : #89c1e9,
+    900 : #78b6e5,
+    A100 : #ffffff,
+    A200 : #ffffff,
+    A400 : #ffffff,
+    A700 : #e5f4ff,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #000000,
+        600 : #000000,
+        700 : #000000,
+        800 : #000000,
+        900 : #000000,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+
 // Light theme.
-$light-primary: mat-palette($mat-blue);
-$light-accent: mat-palette($mat-orange);
+$light-primary: mat-palette($anker-primary-palette);
+$light-accent: mat-palette($anker-accent-palette);
 $light-warn: mat-palette($mat-deep-orange);
 $light-theme: mat-light-theme(
   (
@@ -18,8 +86,8 @@ $light-theme: mat-light-theme(
 );
 
 // Dark theme.
-$dark-primary: mat-palette($mat-blue);
-$dark-accent: mat-palette($mat-orange);
+$dark-primary: mat-palette($anker-primary-palette);
+$dark-accent: mat-palette($anker-accent-palette);
 $dark-warn: mat-palette($mat-deep-orange);
 $dark-theme: mat-dark-theme(
   (

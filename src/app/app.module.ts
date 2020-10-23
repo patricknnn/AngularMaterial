@@ -20,6 +20,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { LoginComponent } from './components/login/login.component';
 import { AuthInterceptor } from './auth/auth.interceptor';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormsComponent } from './components/forms/forms.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     HeaderSmallComponent,
     ButtonsComponent,
     FooterComponent,
-    LoginComponent
+    LoginComponent,
+    FormsComponent
   ],
   imports: [
     BrowserModule,
