@@ -9,6 +9,7 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 export class FormsComponent implements OnInit {
   exampleForm: FormGroup;
   email = new FormControl('', [Validators.required, Validators.email]);
+  colorControl = new FormControl('primary');
 
   constructor(private fb: FormBuilder) {
     this.exampleForm = this.fb.group({
@@ -18,6 +19,7 @@ export class FormsComponent implements OnInit {
       email: ['', Validators.required],
       select: ['', Validators.required],
       text: ['', Validators.required],
+      color: this.colorControl
     });
   }
 
