@@ -13,6 +13,13 @@
         <p class="txt-dark-muted pt-2">Please sign in to your Anker Seacrew account</p>
       </div>
 
+      <div @fadeInOut *ngIf="errorMessage" class="alert alert-danger alert-dismissible fade show" role="alert">
+        {{errorMessage}}
+        <button (click)="removeErrorMessage()" type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
       <form [formGroup]="loginForm" (ngSubmit)="login()">
         <div class="col-12 p-0">
           <mat-form-field appearance="fill" class="w-100">

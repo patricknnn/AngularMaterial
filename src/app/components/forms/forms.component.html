@@ -9,10 +9,66 @@
     <div class="col-12">
       <mat-card class="w-100">
         <div class="container-fluid">
-          <div class="row">
-            <div class="col-12">
+          <div [formGroup]="exampleForm" class="row">
 
+            <div class="col-sm-12 col-md-6 py-1">
+              <mat-form-field appearance="fill" class="w-100">
+                <mat-label>Name</mat-label>
+                <input matInput placeholder="Name" name="name" formControlName="name" required>
+                <mat-icon matSuffix>perm_identity</mat-icon>
+                <mat-error *ngIf="exampleForm.controls.name.invalid">{{getErrorMessage()}}</mat-error>
+              </mat-form-field>
             </div>
+            <div class="col-sm-12 col-md-6 py-1">
+              <mat-form-field appearance="fill" class="w-100">
+                <mat-label>Surname</mat-label>
+                <input matInput placeholder="Surname" name="surname" formControlName="surname" required>
+                <mat-icon matSuffix>perm_identity</mat-icon>
+                <mat-error *ngIf="exampleForm.controls.surname.invalid">{{getErrorMessage()}}</mat-error>
+              </mat-form-field>
+            </div>
+            <div class="col-sm-12 col-md-4 py-1">
+              <mat-form-field appearance="fill" class="w-100">
+                <mat-label>Phone</mat-label>
+                <input matInput placeholder="0612345678" name="phone" formControlName="phone" required>
+                <mat-icon matSuffix>phone</mat-icon>
+                <mat-error *ngIf="exampleForm.controls.phone.invalid">{{getErrorMessage()}}</mat-error>
+              </mat-form-field>
+            </div>
+            <div class="col-sm-12 col-md-4 py-1">
+              <mat-form-field appearance="fill" class="w-100">
+                <mat-label>Enter your email</mat-label>
+                <input matInput placeholder="pat@example.com" name="email" formControlName="email" required>
+                <mat-icon matSuffix>email</mat-icon>
+                <mat-error *ngIf="exampleForm.controls.email.invalid">{{getErrorMessage()}}</mat-error>
+              </mat-form-field>
+            </div>
+            <div class="col-sm-12 col-md-4 py-1">
+              <mat-form-field appearance="fill" class="w-100">
+                <mat-label>Select me</mat-label>
+                <mat-select name="select" formControlName="select">
+                  <mat-option value="option1">Option 1</mat-option>
+                  <mat-option value="option2">Option 2</mat-option>
+                </mat-select>
+                <mat-hint align="end">Here's the dropdown arrow ^</mat-hint>
+                <mat-error *ngIf="exampleForm.controls.select.invalid">{{getErrorMessage()}}</mat-error>
+              </mat-form-field>
+            </div>
+            <div class="col-12 py-1">
+              <mat-form-field appearance="fill" class="w-100">
+                <mat-label>Textarea</mat-label>
+                <textarea matInput name="text" formControlName="text"></textarea>
+                <mat-error *ngIf="exampleForm.controls.text.invalid">{{getErrorMessage()}}</mat-error>
+              </mat-form-field>
+            </div>
+
+            <div class="col-12 py-1">
+              <div class="d-flex align-items-center justify-content-center w-100">
+                <button mat-raised-button color="primary" type="submit" [disabled]="!exampleForm.valid">Submit</button>
+              </div>
+            </div>
+
+
           </div>
         </div>
       </mat-card>
@@ -71,12 +127,9 @@
   </div>
 
   <div class="row">
-    <div class="col-12">
-      <app-header-small title="Errors"
-        subtitle="Display an error message realtime if a field is not filled properly.">
+    <div class="col-sm-12 col-md-6">
+      <app-header-small title="Errors" subtitle="Display realtime error feedback.">
       </app-header-small>
-    </div>
-    <div class="col-12">
       <mat-card class="w-100">
         <div class="container-fluid">
           <div class="row">
@@ -84,22 +137,17 @@
               <mat-form-field appearance="fill" class="w-100">
                 <mat-label>Enter your email</mat-label>
                 <input matInput placeholder="pat@example.com" [formControl]="email" required>
-                <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+                <mat-error *ngIf="exampleForm.controls.email.invalid">{{getErrorMessage()}}</mat-error>
               </mat-form-field>
             </div>
           </div>
         </div>
       </mat-card>
     </div>
-  </div>
 
-  <div class="row">
-    <div class="col-12">
-      <app-header-small title="Hints"
-        subtitle="Display a form field hint.">
+    <div class="col-sm-12 col-md-6">
+      <app-header-small title="Hints" subtitle="Display a form field hint.">
       </app-header-small>
-    </div>
-    <div class="col-12">
       <mat-card class="w-100">
         <div class="container-fluid">
           <div class="row">

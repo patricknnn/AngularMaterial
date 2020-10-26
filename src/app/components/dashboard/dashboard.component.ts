@@ -13,7 +13,7 @@ export class DashboardComponent implements OnInit {
     this.iconCards = [
       new Iconcard("", "Angular 10", "construction", "The latest version of angular", ""),
       new Iconcard("", "Angular router", "directions", "Navigate between views", ""),
-      new Iconcard("", "Angular animations", "slow_motion_video", "Enhance user experience", ""),
+      new Iconcard("", "Angular animations", "style", "Enhance user experience", ""),
       new Iconcard("", "Material Design", "design_services", "Google's design guidelines", ""),
       new Iconcard("", "Material Icons", "insert_emoticon", "Google's material icon set", "info"),
       new Iconcard("", "Forms", "description", "Including input validation", "done"),

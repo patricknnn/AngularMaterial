@@ -1,7 +1,9 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { User } from '../models/user';
-import { shareReplay, tap } from "rxjs/operators";
+import { catchError, shareReplay, tap } from "rxjs/operators";
+import { throwError } from 'rxjs/internal/observable/throwError';
+import { Observable } from 'rxjs';
 
 const API_URL = 'http://localhost:8080/uniface/wrd/AUTHSVC.';
 
@@ -21,7 +23,7 @@ export class AuthService {
    * Login
    * @param data FormData to send with request
    */
-  login(data: FormData) {
+  login(data: FormData): Observable<User> {
     return this.http.post<User>(API_URL + 'login', data)
       .pipe(
         tap(res => this.setSession(res)),
